@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MasterDetail_Demo.ViewModels"
+             x:Class="MasterDetail_Demo.Views.MenuPage"             
+             Title="MenuPage">
+    <ContentPage.BindingContext>
+        <vm:MenuViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource DarkPrimary}">
+        <StackLayout  Padding="15,50,0,50" 
+                              Spacing="0">
+            <Label Text="Welcome"
+                   FontSize="30" 
+                   TextColor="{StaticResource TextPrimary}"/>
+            <Label Text="Username" 
+                   FontSize="30" 
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource TextPrimary}"/>
+        </StackLayout>
+        <ListView x:Name="ListViewMenuItems"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  BackgroundColor="Transparent"
+                  ItemsSource="{Binding MenuItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="0,0,7,0" 
+                                     HorizontalOptions="FillAndExpand">
+                            <StackLayout Padding="15,17,0,17" 
+                                         Orientation="Horizontal" 
+                                         Spacing="20">
+                                <Image Aspect="AspectFit"
+                                       Source="{Binding IconSource}"/>
+                                <Label VerticalOptions="FillAndExpand" 
+                                       VerticalTextAlignment="Center" 
+                                       Text="{Binding Title}" 
+                                       FontSize="14"
+                                       FontAttributes="Bold"
+                                       TextColor="{StaticResource TextPrimary}"/>
+                            </StackLayout>
+                            <BoxView
+                                    BackgroundColor="{StaticResource DividerColor}"
+                                    HeightRequest="1"></BoxView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetail_Demo.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!--Color declarations https://www.materialpalette.com/teal/deep-orange-->
+            <Color x:Key="DarkPrimary">#00796B</Color>
+            <Color x:Key="Primary">#009688</Color>
+            <Color x:Key="LightPrimary">#B2DFDB</Color>
+            <Color x:Key="TextPrimary">#FFFFFF</Color>
+            <Color x:Key="AccentColor">#FF5722</Color>
+            <Color x:Key="PrimaryTextColor">#212121</Color>
+            <Color x:Key="SecondaryTextColor">#757575</Color>
+            <Color x:Key="DividerColor">#BDBDBD</Color>
+
+            <!--Styling for Navigationpage, general-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource TextPrimary}"/>
+            </Style>
+        </ResourceDictionary>
+        
+	</Application.Resources>
+</Application>
