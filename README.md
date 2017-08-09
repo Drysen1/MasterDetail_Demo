@@ -7,7 +7,7 @@ In MainTheme.Base:
     <item name="drawerArrowStyle">@style/MainTheme.DrawerArrowStyle</item>
 ```
 As a separate style: 
-```
+```XML
   <style name="MainTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>
     <item name="color">#FF5722</item>
