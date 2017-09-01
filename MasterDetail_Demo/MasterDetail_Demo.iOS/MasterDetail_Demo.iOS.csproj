@@ -47,9 +47,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Erik Drysen (E9BMHX8XYB)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>MasterDetailDemoDev</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -114,6 +115,9 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\ic_menu_white%403x.png" />
+    <BundleResource Include="Resources\ic_menu_white%402x.png" />
+    <BundleResource Include="Resources\ic_menu_white.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MasterDetail_Demo\MasterDetail_Demo.csproj">
-      <Project>{f5dd6a58-d9d1-4b84-a833-0ffeadae58b7}</Project>
+      <Project>{0FF2810D-5CFE-4E0F-B934-9C21A73EEF6C}</Project>
       <Name>MasterDetail_Demo</Name>
     </ProjectReference>
   </ItemGroup>
